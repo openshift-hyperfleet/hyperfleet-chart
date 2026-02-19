@@ -359,18 +359,6 @@ If pods fail with "Permission denied" or "Unable to generate access token":
 3. Ensure the K8s service account name in Helm values matches what terraform expects
 4. Verify the pod is running in the correct namespace (must match terraform's `kubernetes_namespace`)
 
-## Migration from Legacy Chart
-
-The root-level Chart.yaml is deprecated. Migrate to cloud-specific overlays:
-
-```bash
-# Old (deprecated)
-helm install hyperfleet . -f values.yaml
-
-# New (recommended)
-helm install hyperfleet charts/hyperfleet-gcp -f examples/gcp-pubsub/values.yaml
-```
-
 ## Future Cloud Support
 
 Additional cloud overlays can be added following the same pattern:

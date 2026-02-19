@@ -20,6 +20,7 @@ base:
 
   sentinel:
     broker:
+      type: rabbitmq
       topic: "hyperfleet-clusters"
       rabbitmq:
         url: "amqp://hyperfleet:hyperfleet-dev-password@hyperfleet-rabbitmq:5672/"

@@ -59,6 +59,9 @@ hyperfleet-api:
     registry: quay.io/openshift-hyperfleet
     repository: hyperfleet-api
     tag: ""  # Required: Set to specific version (e.g., "v1.0.0" or "dev-abc1234")
+  adapters:
+    cluster: []
+    nodepool: []
   database:
     # Built-in PostgreSQL for development
     postgresql:
