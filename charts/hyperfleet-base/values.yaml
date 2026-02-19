@@ -58,7 +58,10 @@ hyperfleet-api:
   image:
     registry: quay.io/openshift-hyperfleet
     repository: hyperfleet-api
-    tag: ""  # Required: Set to specific version (e.g., "v1.0.0" or "dev-abc1234")
+    tag: "v0.1.0"
+  adapters:
+    cluster: []
+    nodepool: []
   database:
     # Built-in PostgreSQL for development
     postgresql:
@@ -78,7 +81,7 @@ sentinel:
   image:
     registry: quay.io/openshift-hyperfleet
     repository: sentinel
-    tag: ""  # Required: Set to specific version (e.g., "v1.0.0" or "dev-abc1234")
+    tag: "v0.1.0"
   serviceAccount:
     create: true
     annotations: {}
@@ -107,7 +110,7 @@ sentinel-nodepools:
   image:
     registry: quay.io/openshift-hyperfleet
     repository: sentinel
-    tag: ""
+    tag: "v0.1.0"
   serviceAccount:
     create: true
     annotations: {}

@@ -2,8 +2,8 @@ apiVersion: v2
 name: hyperfleet-base
 description: HyperFleet Base Platform - Core components for cluster lifecycle management
 type: application
-version: 1.0.0
-appVersion: "1.0.0"
+version: 0.1.0
+appVersion: "0.1.0"
 
 maintainers:
   - name: HyperFleet Team
@@ -21,20 +21,20 @@ dependencies:
   # HyperFleet API - Cluster lifecycle management REST API
   - name: hyperfleet-api
     version: "1.0.0"
-    repository: "git+https://github.com/openshift-hyperfleet/hyperfleet-api@charts?ref=main"
+    repository: "git+https://github.com/openshift-hyperfleet/hyperfleet-api@charts?ref=v0.1.0"
     condition: hyperfleet-api.enabled
 
   # HyperFleet Sentinel - Resource polling and event publishing
   # Default sentinel instance (typically for clusters)
   - name: sentinel
     version: "0.1.0"
-    repository: "git+https://github.com/openshift-hyperfleet/hyperfleet-sentinel@deployments/helm/sentinel?ref=main"
+    repository: "git+https://github.com/openshift-hyperfleet/hyperfleet-sentinel@deployments/helm/sentinel?ref=v0.1.0"
     condition: sentinel.enabled
 
   # Additional sentinel for nodepools (optional)
   - name: sentinel
     version: "0.1.0"
-    repository: "git+https://github.com/openshift-hyperfleet/hyperfleet-sentinel@deployments/helm/sentinel?ref=main"
+    repository: "git+https://github.com/openshift-hyperfleet/hyperfleet-sentinel@deployments/helm/sentinel?ref=v0.1.0"
     alias: sentinel-nodepools
     condition: sentinel-nodepools.enabled
 
